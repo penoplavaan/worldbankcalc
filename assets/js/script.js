@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	window.location.assign("https://livebook72.ru/worldbankcalc/");
     var slider = document.getElementById("sumContrSlider");
     var output = document.getElementById("sumContr");
     output.innerHTML = slider.value; // Display the default slider value
