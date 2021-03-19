@@ -1,0 +1,160 @@
+@font-face {
+	font-family: "Europe Normal";
+	src: url("../fonts/europe-normal/europe-normal.eot"); /* IE9 Compat Modes */
+	src: url("../fonts/europe-normal/europe-normal.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		url("../fonts/europe-normal/europe-normal.otf") format("opentype"), /* Open Type Font */
+		url("../fonts/europe-normal/europe-normal.svg") format("svg"), /* Legacy iOS */
+		url("../fonts/europe-normal/europe-normal.ttf") format("truetype"), /* Safari, Android, iOS */
+		url("../fonts/europe-normal/europe-normal.woff") format("woff"), /* Modern Browsers */
+		url("../fonts/europe-normal/europe-normal.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+$deepblue: #231f20;
+$orangeAccent: #eb5017;
+$lightGrey: #231f20; 
+$grey: #f2f2f2;
+$backOfSlider: #1e1f22;
+$darkGreem: #84aa31;
+
+body > *{
+    font-family: 'Arial';
+    font-size: 14px;
+}
+body{
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    content: var(--bs-breadcrumb-divider, "-");
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    background-color: $orangeAccent;
+    color: white;
+    border: none;
+}
+.nav-tabs .nav-link{
+    color: white;
+}
+.nav-tabs .nav-link{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.nav-item{
+    background-color: $deepblue;
+    border-left: 1px $orangeAccent solid; 
+    
+}
+.nav-item:first-of-type{
+    border-left: none;
+}
+.nav-tabs:last-of-type{
+    border-bottom:none;
+}
+.breadcrumb-item a{
+    color: $lightGrey;
+}
+.nav-link{
+    text-align: center;
+}
+.header-upper span{
+    color: $orangeAccent; 
+    font-family: "Europe Normal";
+    font-size: 18px;
+}
+.main{
+    background-color: $grey;
+    margin-left: 1%;
+    width: 64%;
+    padding-bottom: 0.25%;
+    .inputField {
+        width: 120px
+    };
+    
+}
+h2{
+    color: $orangeAccent;
+}
+
+.calc-caption{
+    text-align: right;
+}
+.calculate-button{
+    background: linear-gradient(#bef435, #7ec600);
+    border-radius: 10px;
+    color: #395306;
+    font-weight: bold;
+    width: 120px;
+    height: 36px;
+}
+/*SLIDER BLOCK*/
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: textfield;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */ 
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+/*SLIDER BLOCK END*/
+
+.footer-a{
+    color: white;
+}
+footer{
+    background-color: $deepblue;
+}
+.fixed-bottom{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+}
+#calc{
+    .row{
+         .col-4, .col-2,.col-6{
+             margin-bottom: 20px;
+         }
+    }
+}
+nav{
+    padding-top: 10px;
+    padding-left: 1%;
+}
+.header-upper{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -26px;
+}
+.greenAccent{
+    color: $darkGreem;
+}

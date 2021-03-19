@@ -1,0 +1,191 @@
+ 
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--Bootstrap css end-->
+    <link rel="stylesheet" href="assets/css/style.css"> 
+
+    <!--jQuery + datepicker -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+     <!--jQuery + datepicker end-->
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid header">
+        <div class="row justify-content-between  header-upper ">
+            <div class="col-2"><img src="assets/img/logo.png" alt=""></div>
+            <div class="col-2"><span>8-800-100-5005</span><br><span>+7 (3452) 522-000</span></div>
+        </div> 
+        <div class="row header-second">
+            <ul class="nav nav-tabs">
+                <div class="col-2 nav-item">
+                  <a class="nav-link " href="#">Кредитные карты</a>
+                </div>
+                <div class="col-2 nav-item">
+                  <a class="nav-link active" href="#">Вклады</a>
+                </div>
+                <div class="col-2 nav-item">
+                  <a class="nav-link" href="#">Дебетовая карта</a>
+                </div>
+                <div class="col-2 nav-item">
+                  <a class="nav-link" href="#">Страхование</a>
+                </div>
+                <div class="col-2 nav-item">
+                    <a class="nav-link" href="#">Друзья</a>
+                </div>
+                <div class="col-2 nav-item">
+                    <a class="nav-link" href="#">Интернет-банк</a>
+                </div>
+              </ul>
+        </div>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Главная</a></li>
+          <li class="breadcrumb-item"><a href="#">Вклады</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Калькулятор</li>
+        </ol>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-7 main"> 
+          <h2>Калькулятор</h2>
+          <form id='calc'>
+            <div class="row">
+              <div class="col-3 calc-caption">
+                Дата оформения вклада
+              </div>
+              <div class="col-2">
+                <input type="text" name="date" id="datepicker" required='true' class="inputField" placeholder="дд.мм.гггг">
+              </div>
+              <div class="col-6">
+  
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-3 calc-caption">
+                Сумма вклада
+              </div>
+              <div class="col-2">
+                <input type="number" name="sum" id="sumContr" min='1000' max='3000000' step='1' value="1000" class="inputField">
+              </div>
+              <div class="col-5">
+                <div class="slidecontainer">
+                  <input type="range" min="1000" max="3000000" value="1000" class="slider" id="sumContrSlider">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-3 calc-caption">
+                Срок вклада
+              </div>
+              <div class="col-2">
+                 <select name="yearsCount" id="" class="inputField">
+                   <option value="1">1 год</option>
+                   <option value="2">2 года</option>
+                   <option value="3">3 года</option>
+                   <option value="4">4 года</option>
+                   <option value="5">5 лет</option>
+                 </select>
+              </div>
+              <div class="col-6"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-3 calc-caption">
+                Пополнение вклада
+              </div>
+              <div class="col-2"> 
+                <label><input type="radio" name="isAddable" id="" checked value="0"> Нет</label>
+                <label><input type="radio" name="isAddable" id="" value="1">Да</label>
+              </div>
+              <div class="col-6"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-3 calc-caption">
+                Сумма пополнения вклада
+              </div>
+              <div class="col-2">
+                <input type="number" name="sumAdd" id="sumAdd" min='1000' max='3000000' step='1' value="1000" class="inputField">
+              </div>
+              <div class="col-5">
+                <div class="slidecontainer">
+                  <input type="range" min="1000" max="3000000" value="1000" class="slider" id="sumAddSlider">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2"><input type="submit" value="Рассчитать" class='calculate-button' id='calculate-button'></div>
+              <div class="col-2"><span id="for-result"></span></div>
+            </div>
+
+          </form>
+        </div>
+        
+        
+          
+        
+      </div> 
+    </div>
+    <div class="container">
+      <footer class="fixed-bottom">
+        <div class="row">
+          <div class="col">
+            <a href="" class='footer-a'>Кредитные карты</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" class='footer-a'>Вклады</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" class='footer-a'>Дебетовая карта</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" class='footer-a'>Страхование</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" class='footer-a'>Друзья</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" class='footer-a'>Интернет-банк</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+    <script>
+      /* Локализация datepicker */
+      $.datepicker.regional['ru'] = {
+        closeText: 'Закрыть',
+        prevText: 'Предыдущий',
+        nextText: 'Следующий',
+        currentText: 'Сегодня',
+        monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+        monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+        dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+        dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+        dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+        weekHeader: 'Не',
+        dateFormat: 'dd.mm.yy',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: ''
+      };
+      $.datepicker.setDefaults($.datepicker.regional['ru']);
+
+      $(function(){
+        $("#datepicker").datepicker();
+      });
+      </script>
+
+
+    <!--Bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!--Bootstrap js end-->
+
+    <script src="assets/js/script.js"></script>
+   </body>
+</html>
