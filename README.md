@@ -13,13 +13,14 @@ _Стек технологий:_
 - Кривая адаптивная вёрстка, я в ней не слишком силён
 - Не соблюдены некоторые пропорции и цвета 
 - Небольшие расхождения с источником (ниже)
+- GitHub Pages не поддерживает PHP-запросы, сайт перенесён на личный хостинг[livebook]
 
 ## Дополнительная информация
 
 Часть кода, а именно - формула подсчёта процентов была изменена:
 
 
-```js
+```sh
 summn = summn-1 + (summn-1 + summadd)daysn(percent / daysy)
 ```
 
@@ -38,4 +39,5 @@ summn = summn-1 + summadd + (summn-1 + summadd)daysn(percent / daysy)
  
 
    [fin]: <https://vashifinancy.ru/finansovye-kalkulyatory/kalkulyator-vklada-s-kapitalizatziey-protzentov/>
+   [livebook]: <https://livebook72.ru/worldbankcalc/>
     
